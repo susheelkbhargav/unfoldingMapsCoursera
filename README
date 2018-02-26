@@ -1,24 +1,76 @@
-unfolding_app_template and UC San Diego/Coursera MOOC starter code
-==================================================================
 
-This is a skeleton to use Unfolding in Eclipse as well as some starter
-code for the Object Oriented Programming in Java course offered by 
-UC San Diego through Coursera.
+======================
 
-A very basic Unfolding demo you'll find in the source folder in the default package. 
-For more examples visit http://unfoldingmaps.org, or download the template with
+This was part of the course "Object Oriented Programming in Java"
+
+The code that I have implemented varies for all modules, but please look into module6 for the final code.
+
+A very basic Unfolding demo you'll find in the source folder. For more
+examples visit http://unfoldingmaps.org, or download the template with
 examples.
 
-The module folders contain the starter code for the programming assignments
-associated with the MOOC.
 
-Get excited and make things!
+/** EarthquakeCityMap
+ * An application with an interactive map displaying earthquake data.
+ * Course Creator: UC San Diego Intermediate Software Development MOOC team on July 17, 2015.
+ * @author: susheelKumarBhargavKaparaboyna
+ * 2018-02-25:19:34
+ * */
+
+	Program contains:
+	
+	
+	
+	 Event handler that gets called automatically when the 
+	  mouse moves. Using the event handler for mouse clicks
+	  The map will display an earthquake and its threat circle of cities
+	  Or if a city is clicked, it will display all the earthquakes 
+	  where the city is in the threat circle
+	 
+
+	Please go to the EarthquakeCityMap.java after set up and run as an Applet. If you're working offline, please set the "offline" variable to true;
+	 
+	
+	
+     Helper method to draw key in GUI(used Processing's graphics methods here)
+
+
+	
+	
+	 Method and an appropriate marker to check whether this quake occurred on land.  If it did, it sets the 
+	 "country" property of its PointFeature to the country where it occurred
+	 and returns true.  
+		
+		
+	
+	 Method to loop through the country markers or country features
+	 (either will work) and then for each country, we can loop through
+	 the quakes to count how many occurred in that country.
+    
+
+    The country markers have a "name" property, 
+	And LandQuakeMarkers have a "country" property set.
+	
+	
+	
+-Helper method to test whether a given earthquake is in a given country.This will also add the country property to the properties of the earthquake feature if it's in one of the countries.
+	
+			
+- Method to check if inside country represented by SimplePolygonMarker
+		
+
+
+
 
 
 INSTALLATION
 
 Import this folder in Eclipse ('File' -> 'Import' -> 'Existing Projects into
 Workspace', Select this folder, 'Finish')
+
+Set the native libraries for your OS ('Configure Build Path' > 'Libraries' > Set 'native library location' of jogl.jar).
+
+Switch Java Compiler to 1.6 if you get VM problems. (Processing only works with Java 1.6)
 
 
 MANUAL INSTALLATION
@@ -30,12 +82,3 @@ If the import does not work follow the steps below.
 - Add all lib/*.jars to build path
 - Set native library location for jogl.jar. Choose appropriate folder for your OS.
 - Add data/ as src
-
-
-TROUBLE SHOOTING
-
-Switch Java Compiler to 1.6 if you get VM problems. (Processing should work with Java 1.6, and 1.7)
-
-
-
-
